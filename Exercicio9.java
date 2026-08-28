@@ -1,4 +1,4 @@
-import java.util.Scanner; //REFAZER
+import java.util.Scanner; 
 
 public class Exercicio9{
     public static void main(String[] args) {
@@ -6,6 +6,7 @@ public class Exercicio9{
         //var b = 2.2;
         //var c = "abc";
         var leitor = new Scanner(System.in); //operador de inferencia de tipo (java 10+)
+        //compilador deduz sozinho que leitor é do tipo Scanner, olhando o que está do lado direito do =
         int opcao; //usou int pq nn atribui valor
         var menu = "1-Somar\n2-Multiplicar\n0-Sair";
         do{ 
@@ -20,16 +21,14 @@ public class Exercicio9{
                 System.out.printf("%d + %d = %d\n"
                 , a, b, a + b
                 );
-            }
-        } 
-            else{
+            }else{
              System.out.printf("%d * %d = %d\n"
              , a, b, a * b
              );
             }
-        }
-    }else if (opcao != 0) {
+        } else if (opcao != 0) {
                 System.out.println("Opcao Invalida");
-            }while (opcao != 0);
-
+            }
+        }while (opcao != 0);
+    }
 }
